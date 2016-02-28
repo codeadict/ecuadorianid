@@ -35,13 +35,14 @@ var (
 	ErrInvalidCheckdigit = errors.New("Check digit is incorrect")
 )
 
+// The IdNo struct is a go mapping of a subset of the JSON returned by the ``Validate`` function.
 type IdNo struct {
 	Valid  bool              `json:"valid"`
 	Source string            `json:"source"`
 	Data   map[string]string `json:"data"`
 }
 
-/**
+/* Validates if a national identification document is correct.
  * 00 0 000000 0  (10 digits)
  * |  |        |
  * |  |        `- Check digit
