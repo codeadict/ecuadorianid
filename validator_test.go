@@ -1,6 +1,10 @@
-package validator
+package validator_test
 
-import "testing"
+import(
+  "testing"
+  "github.com/codeadict/ecuadorianid/validator"
+)
+
 
 func TestValid(t *testing.T) {
 	tests := []string{"1719956383"}
