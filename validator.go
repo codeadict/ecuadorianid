@@ -86,9 +86,6 @@ func Validate(id string) (*IdNo, error){
 				if verify == LEN_INDIVIDUAL_ID {
 					verify = 0
 				}
-				n.Data["sum"] = fmt.Sprintf("%02s", strconv.Itoa(sum))
-				n.Data["verify"] = fmt.Sprintf("%02s", strconv.Itoa(verify))
-				n.Data["check"] = fmt.Sprintf("%02s", strconv.Itoa(check_digit))
 				if check_digit != verify {
 					return n, ErrInvalidCheckdigit
 				}
