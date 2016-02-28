@@ -14,7 +14,7 @@ To use the library from your Golang app just need to import it and use as follow
 
   cedula := string "YOURIDHERE"
 
-  if valid, error := Validate(cedula); error != nil {
+  if valid, error := validator.Validate(cedula); error != nil {
     t.Errorf("Error with identification number '%v', response '%+v', error: %+v", cedula, valid, error)
   }
   ```
