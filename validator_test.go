@@ -6,7 +6,7 @@ import(
 
 
 func TestValid(t *testing.T) {
-	tests := []string{"1104680135"}
+	tests := []string{"1105150187"}
 
 	for _, tt := range tests {
 		if p, err := Validate(tt); err != nil {
